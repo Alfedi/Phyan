@@ -1,2 +1,0 @@
-# Phyan
-En un principo que nadie suba cosas a la rama master, vamos a dejarla como plantilla para todos aquellos que se vayan uniendo al repositorio y puedan tener algo con lo que trabajar de cero (así todos hacemos algo). Así que haceros una branch cada uno con vuestro nombre desde la que podéis trabajar tranquilamente.
