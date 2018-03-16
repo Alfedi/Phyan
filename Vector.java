@@ -11,10 +11,7 @@ public class Vector {
     public Vector(double x, double y) {
       this.x = x;
       this.y = y;
-  }
-    // TODO: necesito operaciones de suma
-    // multiplicación, rotación, etc.
-    
+  }   
     // AH: operación de suma de vectores, devuelve un nuevo vector
     public Vector add(Vector v1, Vector v2) {
 	return  new Vector(v1.x + v2.x, v1.y + v2.y);
