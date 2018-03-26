@@ -20,6 +20,10 @@ public class Vector {
     public Vector multnum (Vector v1, int n) {
 	return new Vector(v1.x * n, v1.y * n);
     }
+    // División del vector por un número
+    public Vector divnum (Vector v1 , int n) {
+	return new Vector(v1.x / n, v1.y / n);
+    }
     // Porducto escalar de dos vectores
     public double escalar (Vector v1, Vector v2) {
 	return ((v1.x * v2.x) + (v1.y * v2.y));
