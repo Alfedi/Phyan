@@ -22,8 +22,6 @@ public class Ball {
 	// AH: la nueva posición depende de la velocidad y el tiempo en el
 	// que se aplica esa velocidad
 	// TODO: hace falta sacar el espacio desde la velocidad
-	Vector new_position;
 	this.position = this.position.add(speed);
-	new_position = this.position.divnum(milliseconds);
   }
 }
