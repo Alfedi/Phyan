@@ -9,36 +9,39 @@ public class Vector {
     }
     // AH: para construir un vector espero coordenadas cartesianas.
     public Vector(double x, double y) {
-      this.x = x;
-      this.y = y;
-  }   
+	this.x = x;
+	this.y = y;
+    }   
     // AH: operación de suma de vectores, devuelve un nuevo vector
-    public Vector add(Vector v1, Vector v2) {
-	return  new Vector(v1.x + v2.x, v1.y + v2.y);
+    public Vector add(Vector v1) {
+	return new Vector(this.x+ v1.x, this.y + v1.x);
     }
     // Multipliación de un número por el vector
-    public Vector multnum (Vector v1, int n) {
-	return new Vector(v1.x * n, v1.y * n);
+    public Vector multnum (int n) {
+	return new Vector(this.x * n, this.y * n);
     }
     // División del vector por un número
-    public Vector divnum (Vector v1 , int n) {
-	return new Vector(v1.x / n, v1.y / n);
+    public Vector divnum (int n) {
+	return new Vector(this.x / n, this.y / n);
     }
-    // Porducto escalar de dos vectores
-    public double escalar (Vector v1, Vector v2) {
-	return ((v1.x * v2.x) + (v1.y * v2.y));
+    // Producto escalar de dos vectores
+    public double escalar (Vector v1) {
+	return ((this.x * v1.x) + (this.y * v1.y));
     }
     // Producto vectorial
-    public Vector vectorial (Vector v1, Vector v2) {
-	return new Vector(0, ((v1.x * v2.y) - (v2.x * v1.y)));
+    public Vector vectorial (Vector v1) {
+	return new Vector(0, ((this.x * v1.y) - (v1.x * this.y)));
     }
     // Módulo de un vector
-    public double modulo (Vector v1) {
-	return (Math.sqrt(Math.pow(v1.x, 2) + Math.pow(v1.y, 2)));
+    public double modulo () {
+	return (Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2)));
     }
     // Normalización de un vector
-    public Vector normalizar (Vector v1) {
-	double aux = modulo(v1);
-	return new Vector (v1.x / aux, v1.y / aux);
+    public Vector normalizar () {
+	double aux = modulo();  // Revisar esto :/
+	return new Vector (this.x / aux, this.y / aux);
+    }
+    public String toString() {
+	return "(" + this.x + ", " + this.y + ")";
     }
 }
